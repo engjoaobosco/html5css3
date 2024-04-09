@@ -3,17 +3,54 @@ Folha de estilos do site One page site HTML5 e CSS3
 #author João Bôsco / Prof. José de Assis  -  github.com/engjoaobosco
 */
 
+/* CSS reset = Aplica uma sobreposição aos estilos dos navegadores evitando conflitos */
+*{
+    margin: 0; 
+    border: 0; 
+    padding: 0;
+}
+/* Importação (Google Fonts) */
+/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+</style> */
+
+/* body{
+    // <uniquifier>: Use a unique and descriptive class name
+    // <weight>: Use a value from 300 to 800
+    
+    .open-sans-<uniquifier> {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 100;
+    }
+} */
+
+/* LAYOUT - Centrlizando os elementos */
+.Container{
+    margin: 0 auto;
+    background-color: #7f0;
+}
+
 /* Smartphone Portrait   >>> */
 /* Smartphone Landscape   >> */
 @media (min-width: 576px){
     body{
         background-color: #00f;
     }
+    .Container{
+        max-width: 540px;     
+}
 }
 /* Tablet Portrait   >>>>>>> */
 @media (min-width: 768px){
     body{
         background-color: #ff0;
+    }
+    .Container{
+        max-width: 720px;
     }
 }
 /* Tablet Landscape   >>>>>> */
@@ -21,10 +58,17 @@ Folha de estilos do site One page site HTML5 e CSS3
     body{
         background-color: #f60;
     }
+    .Container{
+        max-width: 960px;
+    }
 }
+
 /* PC >>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px){
     body{
         background-color: #f00;
+    }
+    .Container{
+        max-width: 1140px;
     }
 }
