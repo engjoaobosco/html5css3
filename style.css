@@ -31,33 +31,89 @@ Folha de estilos do site One page site HTML5 e CSS3
 /* LAYOUT - Centrlizando os elementos */
 .Container{
     margin: 0 auto;
-    background-color: #7f0;
+    /* Cor abaixo removida */
+    /* background-color: #dcdcdc; */
 }
 
-/* Smartphone Portrait   >>> */
+/* Criando uma classe */
+.Flex{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #a9a9a9; */
+}
+
+/* Topo do site - Ícone para ir ao topo */
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* Smartphone Portrait - definindo altura do cabecalho, que pode ser usada a TAG header ou o id(id=inicio)  >>> */
+header{
+    height: 60px;
+}
+#logo img{
+    width: 128px;
+    height: 128px;
+}
+#check{
+    display: none;
+}
+/* Como no html tem apenas uma TAG label, nao precisa usar # */
+label{
+    font-size: 2em;
+    padding-right: 15px;
+}
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    /* Para esconder o menu, definir -100% e 100% (largura maxima) ou definir uma outra largura*/
+    right: -100%;
+    /* Eu acho melhor deixar sem esta largura. Para isso basta deletar este codigo. A largura esta em 15px, definido em label */
+    width: 100%;
+    /* Aplicando um delay para aparecer o menu */
+    transition: all 0.5s;
+}
+/* Controlando o menu - ao clicar aparece e desaparece. Cuidado: sem espaco no codigo!*/
+#check:checked ~ ul{
+    right: 0;
+}
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+/* Removendo a cor azul dos topicos do menu e colocando a cor branco */
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
 /* Smartphone Landscape   >> */
 @media (min-width: 576px){
-    body{
+    /* body{
         background-color: #00f;
-    }
+    } */
     .Container{
         max-width: 540px;     
 }
 }
 /* Tablet Portrait   >>>>>>> */
 @media (min-width: 768px){
-    body{
+    /* body{
         background-color: #ff0;
-    }
+    } */
     .Container{
         max-width: 720px;
     }
 }
 /* Tablet Landscape   >>>>>> */
 @media (min-width: 992px){
-    body{
+    /* body{
         background-color: #f60;
-    }
+    } */
     .Container{
         max-width: 960px;
     }
@@ -65,10 +121,42 @@ Folha de estilos do site One page site HTML5 e CSS3
 
 /* PC >>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px){
-    body{
+    /* body{
         background-color: #f00;
-    }
+    } */
     .Container{
         max-width: 1140px;
     }
+    /* Cabecalho - ajustando a img do logo para uma dimensao maior por causa da tela do PC */
+    header{
+        height: 120px;
+    }
+    #logo img{
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+    label{
+        display: none;
+    }
+    nav ul{
+        /* Definindo novos valores para nav ul aqui nesta configuracao @media, a outra eh ignorada */
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    nav ul li a{
+        color: #343538;
+
+    }
+    nav ul li a:hover{
+        color: #064dd1;
+    }
+
+
 }
