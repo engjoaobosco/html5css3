@@ -41,6 +41,16 @@ Folha de estilos do site One page site HTML5 e CSS3
     justify-content: space-between;
     /* background-color: #a9a9a9; */
 }
+.Botao{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    background-color: #c00000;
+    /* tamanho do Botão: 10 px X 40px */
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
 
 /* Topo do site - Ícone para ir ao topo */
 #topo{
@@ -91,6 +101,24 @@ nav ul li a{
     text-decoration: none;
     color: #fff;
 }
+main{
+    height: 75vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+main h1{
+    font-size: 2.5em;
+}
+main h2{
+    font-size: 1em;
+    /* 20x top 0px right 50px botton 0px left  */
+    margin: 20px 0px 50px 0px;
+}
 /* Smartphone Landscape   >> */
 @media (min-width: 576px){
     /* body{
@@ -98,8 +126,14 @@ nav ul li a{
     } */
     .Container{
         max-width: 540px;     
+    }
+    /* Criando uma sombra em h1 e h2 */
+    main h1, main h2{
+        text-shadow: #000 0.05em 0.05em 0.05em;
+    }
+
 }
-}
+
 /* Tablet Portrait   >>>>>>> */
 @media (min-width: 768px){
     /* body{
@@ -107,6 +141,16 @@ nav ul li a{
     } */
     .Container{
         max-width: 720px;
+    }
+    /* Destaque */
+    main{
+        height: 45vh;
+    }
+    main h1{
+        font-size: 5.5em;
+    }
+    main h2{
+        font-size: 2em;
     }
 }
 /* Tablet Landscape   >>>>>> */
@@ -116,6 +160,9 @@ nav ul li a{
     } */
     .Container{
         max-width: 960px;
+    }
+    main{
+        height: 70vh;
     }
 }
 
