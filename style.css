@@ -74,7 +74,13 @@ header{
 /* Como no html tem apenas uma TAG label, nao precisa usar # */
 label{
     font-size: 2em;
-    padding-right: 15px;
+    /* Ajustando Bug: hamburguer rola junto e nao se consegue recolher o menu */
+    /* padding-right: 15px; */
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    /* Trocar cor para rgb e deixar tranasparente o hamburguer em 50% (0.5) */
+    color: rgba(0,0,0,0.5);
 }
 nav ul{
     list-style: none;
