@@ -3,32 +3,26 @@ Folha de estilos do site One page site HTML5 e CSS3
 #author João Bôsco / Prof. José de Assis  -  github.com/engjoaobosco
 */
 
+
+
 /* CSS reset = Aplica uma sobreposição aos estilos dos navegadores evitando conflitos */
 *{
     margin: 0; 
     border: 0; 
     padding: 0;
 }
+
 /* Importação (Google Fonts) */
-/* <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
-</style> */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') */
 
-/* body{
-    // <uniquifier>: Use a unique and descriptive class name
-    // <weight>: Use a value from 300 to 800
-    
-    .open-sans-<uniquifier> {
-      font-family: "Open Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: <weight>;
-      font-style: normal;
-      font-variation-settings:
-        "wdth" 100;
-    }
-} */
 
-/* LAYOUT - Centrlizando os elementos */
+
+body{
+    font-family: "Open Sans", sans-serif; 
+    font-size: 1em; 
+} 
+
+/* LAYOUT - Centralizando os elementos */
 .Container{
     margin: 0 auto;
     /* Cor abaixo removida */
@@ -41,6 +35,13 @@ Folha de estilos do site One page site HTML5 e CSS3
     justify-content: space-between;
     /* background-color: #a9a9a9; */
 }
+
+.Flex2{
+    display: flex;
+    align-items: center;
+
+}
+
 .Botao{
     text-decoration: none;
     color: #fff;
@@ -105,6 +106,7 @@ main{
     height: 75vh;
     background: url(img/banner.jpg);
     background-size: cover;
+    background-position: center;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -119,6 +121,35 @@ main h2{
     /* 20x top 0px right 50px botton 0px left  */
     margin: 20px 0px 50px 0px;
 }
+/* Sobre */
+#sobre{
+    /* Espaçamento sup/inferior: 50px laterais: 0px */
+    padding: 50px 0px;
+    background: url(img/background.png);
+    /* Para ajustar a imagem ao tamanho do container: */
+    background-size: cover;
+    background-position: center;
+}
+#destaqueSobre{
+    /* Escondendo a imagem nesta configuração */
+    display: none;
+}
+#textoSobre{
+    /* Configurando tudo que estiver dentro da div */
+    color: #fff;
+    /* Espaçamento na esq e direita */
+    padding: 0px 10px;
+}
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+.TopicosSobre{
+    margin-top: 20px;
+}
+.TopicosSobre img{
+    margin-right: 10px;
+}
+
 /* Smartphone Landscape   >> */
 @media (min-width: 576px){
     /* body{
@@ -203,6 +234,17 @@ main h2{
     }
     nav ul li a:hover{
         color: #064dd1;
+    }
+    #sobre{
+        /* Efeito parallax = manter o background sem rolagem */
+        background-attachment: fixed;
+    }
+    #destaqueSobre{
+        display: inline;
+    }
+    #destaqueSobre img{
+        border-radius: 50%;
+        margin-right: 50px;
     }
 
 
