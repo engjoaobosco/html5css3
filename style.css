@@ -41,6 +41,10 @@ body{
     align-items: center;
 
 }
+.Flex3{
+    display: flex;
+    flex-direction: column;
+}
 
 .Botao{
     text-decoration: none;
@@ -155,6 +159,24 @@ main h2{
 .TopicosSobre img{
     margin-right: 10px;
 }
+/* One Page - Ajustando o video para caber na tela do celular portrait */
+/* Passo 1 - Criando um espaçamento interno para os conteúdos*/
+#onePage{
+    /* Mantendo o padrão usado nas demais seções: 50 altura / 10 lateral esq */
+    padding: 50px 10px;
+}
+#onePage h2{
+    margin-bottom: 10px;
+}
+#onePage p{
+    margin-bottom: 25px;
+}
+/* Existem várias tecnicas p/ajuste dos videos. Vou usar aqui os próprios recursos do You Tube para exibir o vídeo em tela cheia */
+.Video iframe{
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
 
 /* Smartphone Landscape   >> */
 @media (min-width: 576px){
@@ -169,6 +191,13 @@ main h2{
         text-shadow: #000 0.05em 0.05em 0.05em;
     }
 
+}
+
+/* Esta configuração de video nao funcionou no celular landscape - Procurar erro */
+
+#video iframe{
+    width: 560px;
+    height: 315px;
 }
 
 /* Tablet Portrait   >>>>>>> */
@@ -190,6 +219,7 @@ main h2{
         font-size: 2em;
     }
 }
+
 /* Tablet Landscape   >>>>>> */
 @media (min-width: 992px){
     /* body{
@@ -202,6 +232,7 @@ main h2{
         height: 70vh;
     }
 }
+
 
 /* PC >>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px){
@@ -251,6 +282,10 @@ main h2{
     #destaqueSobre img{
         border-radius: 50%;
         margin-right: 50px;
+    }
+    .Flex3{
+        flex-direction: row;
+        align-items: center;
     }
 
 
