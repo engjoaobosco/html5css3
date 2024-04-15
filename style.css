@@ -177,6 +177,35 @@ main h2{
     height: 191px;
     border: 0;
 }
+#wireframe{
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+#textoWire{
+    color: #fff;
+    /* Ajuste texto esq/dir (10px) */
+    padding: 0px 10px;
+}
+#textoWire h2{
+    margin-bottom: 10px;
+}
+#textoWire p{
+    margin-bottom: 40px;
+}
+#textoWire a{
+    color: #fff;
+}
+#textoWire img{
+    margin-top: 40px;
+}
+#textoWire span{
+    display: none;
+}
+#qrCode{
+    display: none;
+}
 
 /* Smartphone Landscape   >> */
 @media (min-width: 576px){
@@ -287,6 +316,25 @@ main h2{
         flex-direction: row;
         align-items: center;
     }
-
-
+    #qrCode{
+        background-attachment: fixed;
+        display: inline;
+    }
+     .Flex3{
+        flex-direction: row;
+        align-items: center;
+    }
+    #wireframe{
+        background-attachment: fixed;
+    }
+    #wireframe span{
+        display: inline;
+        color: #6796ee;
+    }
+    #qrCode img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    
 }
