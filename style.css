@@ -45,6 +45,11 @@ body{
     display: flex;
     flex-direction: column;
 }
+.Flex4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
 .Botao{
     text-decoration: none;
@@ -56,6 +61,38 @@ body{
     border: 2px solid #fff;
     border-radius: 25px;
 }
+.Card{
+    /* Esta configuração atinge todos os cartões "Card" */
+    margin-top: 25px;
+    /* Ajustando os cartões para a maior tela possível em Smartphone. Prefira ajustar as img nas medidas certas e não configurar para o CSS ajustar, assim se consegue um melhor desempenho. Qto menos trabalho para o CSS melhor fica o seu site. */
+    width: 338px;
+    height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
+    /* margin-left: 10px; */
+}
+.Card img{
+    border-radius: 25px 25px 0px 0px;
+}
+.Card h3{
+    margin-top: 15px;
+}
+/* Ajuste do <p> para 4 linhas: Cuidado, o texto precisa ter no mínimo 4 linhas! */
+.Card p{
+    /* Alinhando o texto à esquerda */
+    text-align: left;  
+    color: #434343;
+     /*Espaçamento interno  10_sup / 30_dir / 50_inf / 30_esq */
+     padding: 10px 30px 50px 30px;
+}
+.Card a{
+    /* Sobrepondo a formatação da classe do botão com mais ajustes (largura) */
+    /* 10= sup/inf  e  100= esq/dir */
+    padding: 10px 100px;
+    border: 0;
+}
 
 /* Topo do site - Ícone para ir ao topo */
 #topo{
@@ -64,7 +101,9 @@ body{
     bottom: 10px;
 }
 
-/* Smartphone Portrait - definindo altura do cabecalho, que pode ser usada a TAG header ou o id(id=inicio)  >>> */
+/* SMARTPHONE PORTRAIT  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* Header - definindo altura do cabecalho, que pode ser usada a TAG header ou o id(id=inicio) */
 header{
     height: 60px;
 }
@@ -206,8 +245,28 @@ main h2{
 #qrCode{
     display: none;
 }
+/* Conteúdo - CARDS */
+#conteudo{
+    padding: 50px 0px;
+}
+#conteudo h2{
+    margin-bottom: 25px;
+    text-align: center;
+}
+#todos{
+    margin-top: 30px;
+    text-align: center;
+}
+#todos a{
+    text-decoration: none;
+    color: #000;
+    /* Tirar o peso da fonte (o negrito) */
+    font-weight: 700;
+    font-size: 1.25em;
+}
 
-/* Smartphone Landscape   >> */
+/* SMARTPHONE LANDSCAPE  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
 @media (min-width: 576px){
     /* body{
         background-color: #00f;
